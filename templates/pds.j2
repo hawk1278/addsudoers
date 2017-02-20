@@ -1,0 +1,3 @@
+{% for item in sudo_users %}
+{{ item.name }} {{ item.hosts | default('ALL') }}={{ "(" ~ item.users | default('ALL') ~ ":" ~ item.groups | default('ALL') ~ ")" }} {{ "NOPASSWD:" if item.nopasswd | default(false) else "" }} {{ item.commands | default('ALL') }}
+{% endfor %}

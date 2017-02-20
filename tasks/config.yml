@@ -1,0 +1,9 @@
+---
+- name: create pds sudoers
+  template:
+    src: "pds.j2"
+    dest: "/etc/sudoers.d/pds"
+    validate: "visudo -cf %s"
+    owner: "root"
+    group: "root"
+    mode: "0440"
