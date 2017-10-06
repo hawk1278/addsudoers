@@ -1,9 +1,10 @@
 ---
-- name: create pds sudoers
+- name: create sudoers
   template:
-    src: "pds.j2"
-    dest: "/etc/sudoers.d/pds"
+    src: "../templates/pds.j2"
+    dest: "/etc/sudoers.d/{{ items.name }}"
     validate: "visudo -cf %s"
     owner: "root"
     group: "root"
     mode: "0440"
+  with_items: "{{ sudo_users }}"

@@ -1,7 +1,4 @@
 ---
 # defaults file for pds-sudoers
 sudo_users:
-- name: "%admins"
-  nopasswd: yes
-
-sudo_package: sudo
+  - { name: rich, nopasswd: yes }
