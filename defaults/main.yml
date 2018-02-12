@@ -1,4 +1,1 @@
 ---
-# defaults file for pds-sudoers
-sudo_users:
-  - { name: rich, nopasswd: yes }

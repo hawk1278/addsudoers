@@ -2,7 +2,7 @@
 - name: create sudoers
   template:
     src: "../templates/pds.j2"
-    dest: "/etc/sudoers.d/{{ items.name }}"
+    dest: "/etc/sudoers.d/{{ item.name }}"
     validate: "visudo -cf %s"
     owner: "root"
     group: "root"
