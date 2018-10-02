@@ -1,3 +1,1 @@
 ---
-sudo_users: 
-  - { name: ro1423, nopasswd: yes }
